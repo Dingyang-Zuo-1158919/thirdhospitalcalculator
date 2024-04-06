@@ -1,0 +1,42 @@
+.button1{
+    background-color: rgb(255, 217, 0);
+    color: white;
+    font-size: 30px;
+    border-color: unset;
+    border-radius: 5%;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+table{
+    border:5px solid rgba(133, 46, 46, 0.588);
+    border-width: thick;
+    border-style: hidden;
+    width: 150%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    gap: 5px;
+}
+
+
+.header{
+    gap:5px;
+    font-weight: bolder;
+    color: rgba(224, 50, 7, 0.815);
+    background-color: #9fc41bca;
+}
+
+.body{
+    color:rgba(30, 32, 16, 0.86);
+    font-weight: normal;
+    font-size: 2rem;
+    background-color: rgba(26, 172, 104, 0.801);
+    border-collapse: collapse;
+}
+
+.button2{
+    background-color: rgba(0, 0, 255, 0.178) !important;
+    font-size: large;
+    color:darkblue
+}
