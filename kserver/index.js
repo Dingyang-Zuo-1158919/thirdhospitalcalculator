@@ -7,8 +7,9 @@ app.use(cors());
 app.use(express.json());
 
 const db = mysql.createConnection({
-    user: "root",
-    host: "localhost",
+    host: 'thirdhospitalcalculator.cxweo2aeu1iq.ap-northeast-1.rds.amazonaws.com',
+    port: 3306,
+    user: "admin",
     password: "ZDYzdy123",
     database: "kcalculator"
 });
@@ -58,6 +59,6 @@ app.delete("/delete/:id", (req, res) => {
     });
 });
 
-app.listen(3000, () => {
+app.listen(3306, () => {
     console.log("your server is running on port 3000");
 });

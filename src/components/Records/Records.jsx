@@ -8,14 +8,14 @@ function Records(){
     const [thirdhospitalcal, setThirdhospitalcal] = useState([]);
 
     const getData = () => {
-        Axios.get("http://localhost:3000/thirdhospitalcal").then((response) => {
+        Axios.get("https://thirdhospitalcalculator.cxweo2aeu1iq.ap-northeast-1.rds.amazonaws.com:3306/thirdhospitalcal").then((response) => {
             setThirdhospitalcal(response.data);
             console.log(response.data)
         });
     };
 
     const deleteData = (id) => {
-        Axios.delete(`http://localhost:3000/delete/${id}`).then(() => {
+        Axios.delete(`https://thirdhospitalcalculator.cxweo2aeu1iq.ap-northeast-1.rds.amazonaws.com:3306/delete/${id}`).then(() => {
                 setThirdhospitalcal(
                     thirdhospitalcal.filter((item) => {
                         return item.id !== id;
