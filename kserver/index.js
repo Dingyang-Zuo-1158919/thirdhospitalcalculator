@@ -21,7 +21,9 @@ app.post("/create", (req, res) => {
     const Team = req.body.Team;
     const Name = req.body.Name;
     const Result = req.body.Result;
-
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization')
     db.query(
         "INSERT INTO kcalculator.thirdhospitalcal (Year, Month, Team, Name, Result) VALUES (?,?,?,?,?)",
         [Year, Month, Team, Name, Result],
@@ -38,6 +40,8 @@ app.post("/create", (req, res) => {
 
 app.get("/thirdhospitalcal", (req, res) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization')
     db.query("SELECT * FROM kcalculator.thirdhospitalcal", (err, re) => {
         if(err){
             console.log(err);
@@ -50,6 +54,9 @@ app.get("/thirdhospitalcal", (req, res) => {
 app.delete("/delete/:id", (req, res) => {
     const id = req.params.id;
     const sqlStr = 'delete from thirdhospitalcal where id=?';
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization')
     db.query(sqlStr, id, (err, result)=>{
         if(err){
             console.log(err);
