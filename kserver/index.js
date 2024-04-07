@@ -60,6 +60,6 @@ app.delete("/delete/:id", (req, res) => {
     });
 });
 
-app.listen(80, () => {
+app.listen(3000, () => {
     console.log("your server is running on port 3000");
 });
