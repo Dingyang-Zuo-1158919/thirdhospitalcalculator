@@ -1,3 +1,4 @@
+
 const express = require("express");
 const app = express();
 const mysql = require("mysql");
@@ -59,6 +60,6 @@ app.delete("/delete/:id", (req, res) => {
     });
 });
 
-app.listen(3000, () => {
-    console.log("your server is running on port 3000");
+app.listen(80, () => {
+    console.log("your server is running on port 80");
 });
