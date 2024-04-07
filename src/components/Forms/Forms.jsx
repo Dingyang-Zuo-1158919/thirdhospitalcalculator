@@ -21,7 +21,7 @@ function Forms(){
     const [thirdhospitalcal, setThirdhospitalcal] = useState([]);
 
     const addData = () => {
-        Axios.post("https://54.199.9.104:80/create",{
+        Axios.post("http://54.199.9.104:80/create",{
             Year: yearNum,
             Month: monthNum,
             Team: doctorTeam,
