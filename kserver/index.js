@@ -7,8 +7,9 @@ app.use(cors());
 app.use(express.json());
 
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: "root",
+    host: 'kcalculatordb.cxweo2aeu1iq.ap-northeast-1.rds.amazonaws.com',
+    port: 3306,
+    user: "admin",
     password: "ZDYzdy123",
     database: "kcalculator"
 });
